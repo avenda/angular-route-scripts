@@ -1,0 +1,24 @@
+{
+  "name": "angular-route-scripts",
+  "version": "0.0.0",
+  "homepage": "https://github.com/avenda/angular-route-scripts",
+  "authors": [
+    "avenda <avenda@gmail.com>"
+  ],
+  "description": "create scripts element using angular-route",
+  "main": "route-scripts.js",
+  "keywords": [
+    "route",
+    "scripts",
+    "angular",
+    "directive"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
