@@ -2,6 +2,7 @@
  * Created by Victor Avendano on 1/10/15.
  * avenda@gmail.com
  */
+ 'use strict';
 (function(){
 
     var mod = angular.module('routeScripts', ['ngRoute']);
