@@ -10,7 +10,7 @@
     mod.directive('routeScripts', ['$rootScope','$compile',
         function($rootScope, $compile){
           return {
-            restrict: 'A',
+            restrict: 'E',
             link: function (scope, element) {
               var html = '<script ng-src="{{jsUrl}}" ng-repeat="(routeCtrl, jsUrl) in routeScripts"></script>';
               element.append($compile(html)(scope));
