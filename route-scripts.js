@@ -12,24 +12,24 @@
           return {
             restrict: 'E',
             link: function (scope, element) {
-              var html = '<script ng-src="{{jsUrl}}" ng-repeat="(routeCtrl, jsUrl) in routeScripts"></script>';
+              var html = '<script ng-src="{{script}}" ng-repeat="script in routeScripts"></script>';
               element.append($compile(html)(scope));
-              scope.routeScripts = {};
+              scope.routeScripts = [];
               $rootScope.$on('$routeChangeStart', function (e, next, current) {
                   if(current && current.$$route && current.$$route.js){
                     if(!Array.isArray(current.$$route.js)){
                         current.$$route.js = [current.$$route.js];
                     }
-                    angular.forEach(current.$$route.js, function(script){
-                        delete scope.routeScripts[script];
+                    current.$$route.js.forEach(function(script, index){
+                      scope.routeScripts.splice(index, 1);
                     });
                   }
                   if(next && next.$$route && next.$$route.js){
                     if(!Array.isArray(next.$$route.js)){
                         next.$$route.js = [next.$$route.js];
                     }
-                    angular.forEach(next.$$route.js, function(script){
-                        scope.routeScripts[script] = script;
+                    next.$$route.js.forEach(function(script, index){
+                      scope.routeScripts.push(script);
                     });
                   }       
               });
