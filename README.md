@@ -1,7 +1,7 @@
 angular-route-scripts
 ====================
 
-This is a simple module for AngularJS (based on angular-route-scripts) that provides the ability to have route-specific JS scripts, by integrating with Angular's built-in `$routeProvider` service.
+This is a simple module for AngularJS (based on [angular-route-scripts](https://github.com/tennisgent/angular-route-styles)) that provides the ability to have route-specific JS scripts, by integrating with Angular's built-in `$routeProvider` service.
 
 What does it do?
 ---------------
@@ -140,6 +140,6 @@ This config adds a custom JS property to the object that is used to setup each p
 This directive does the following things:
 
 * It compiles (using `$compile`) an html string that creates a set of <script /> tags for every item in the `scope.routescripts` object using `ng-repeat` and `ng-src`.
-* It appends that compiled set of `<script />` elements to the `<head>` tag.
+* It appends that compiled set of `<script />` elements to the `<route-scripts>` tag.
 * It then uses the `$rootScope` to listen for `'$routeChangeStart'` events. For every `'$routeChangeStart'` event, it grabs the "current" `$$route` object (the route that the user is about to leave) and removes its partial-specific JS file(s) from the `<route-scripts>` tag. It also grabs the "next" `$$route` object (the route that the user is about to go to) and adds any of its partial-specific JS file(s) to the `<route-scripts>` tag.
 * And the `ng-repeat` part of the compiled `<script />` tag handles all of the adding and removing of the page-specific scripts based on what gets added to or removed from the `scope.routescripts` object.
