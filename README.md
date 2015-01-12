@@ -1,7 +1,7 @@
 angular-route-scripts
 ====================
 
-This is a simple module for AngularJS (based on [angular-route-scripts](https://github.com/tennisgent/angular-route-styles)) that provides the ability to have route-specific JS scripts, by integrating with Angular's built-in `$routeProvider` service.
+This is a simple module for AngularJS (based on [angular-route-styles](https://github.com/tennisgent/angular-route-styles)) that provides the ability to have route-specific JS scripts, by integrating with Angular's built-in `$routeProvider` service.
 
 What does it do?
 ---------------
