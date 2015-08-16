@@ -1,6 +1,8 @@
 angular-route-scripts
 ====================
 
+[![Join the chat at https://gitter.im/avenda/angular-route-scripts](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/avenda/angular-route-scripts?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 This is a simple module for AngularJS (based on [angular-route-styles](https://github.com/tennisgent/angular-route-styles)) that provides the ability to have route-specific JS scripts, by integrating with Angular's built-in `$routeProvider` service.
 
 What does it do?
